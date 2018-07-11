@@ -1,0 +1,16 @@
+<h1>Hola MTWDM</h1>
+
+{{mtwin.miVariable}}
+
+<i class="fa {{mtwin.miArray.icono}} text-{{mtwin.miArray.color}} fa-4x"></i>
+<span class="label label-{{mtwin.miArray.color}}">{{mtwin.miArray.descripcion}}</span>
+
+<ui-select ng-model="mtwin.localidadItem" theme="bootstrap">
+    <ui-select-match allow-clear="true" placeholder="Localidad">{{$select.selected.nombreLocalidad}}</ui-select-match>
+    <ui-select-choices repeat="item in mtwin.localidadesList" 
+        refresh="mtwin.refreshLocalidades($select.search)"
+        refresh-delay="0">
+        <div ng-bind-html="item.nombreLocalidad | highlight: $select.search"></div>
+        <!--<small ng-bind-html="item.email | highlight: $select.search"></small>-->
+    </ui-select-choices>
+</ui-select>

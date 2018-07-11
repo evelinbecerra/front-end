@@ -1,0 +1,30 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "Front End para el consumo de API en .NET (Cubo - MDX)",
+  "main": "app.js",
+  "scripts": {
+    "start": "set NODE_ENV=production & node ./bin/www.js",
+    "start-dev": "set DEBUG=front-end:* & nodemon ./bin/www.js",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evelinbecerra/front-end.git"
+  },
+  "author": "Maria Evelin Becerra Santos <velin.becerra@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evelinbecerra/front-end/issues"
+  },
+  "homepage": "https://github.com/evelinbecerra/front-end#readme",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
